@@ -1,0 +1,22 @@
+<script>
+    var aantalLucifers = 21; // GLOBALE VARIABELE
+
+    function pakLucifers(aantal) {
+
+        if (aantal > 3) {
+            alert("Dat kan niet!!");
+        } else {
+            if (aantalLucifers - aantal <= 0) {
+
+                aantalLucifers = 0;
+
+            } else {
+
+                aantalLucifers = aantalLucifers - aantal;
+
+            }
+
+            return aantalLucifers;
+        }
+    }
+</script>

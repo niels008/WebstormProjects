@@ -1,0 +1,72 @@
+<html>
+<head>
+    <title>Oefening</title>
+</head>
+<body>
+<script>
+
+    function addBugs() {
+
+        document.body.innerHTML += '<img src="http://s4d.tezzt.nl/wordpress/wp-content/uploads/2014/02/bugs.png" alt="bugs">';
+    }
+
+    function addElmer() {
+
+        document.body.innerHTML += '<img src="http://s4d.tezzt.nl/wordpress/wp-content/uploads/2014/02/elmer.png" alt="elmer">';
+    }
+    // ik heb hier een functie toegevoegd addBr die voegt een br toe aan elk document dat word toegevoegd in de body en die voeg ik vervolgens toe aan de for loop
+    function addBr(){
+
+        document.body.innerHTML += "<br>";
+    }
+
+    function addPicture() {
+
+        if ( Math.random() < 0.9 ) {
+            addBugs();
+        } else {
+            addElmer();
+        }
+        //  90% Bugs 10% Elmer
+    }
+
+   // var antwoord = prompt("Hoeveel plaatjes wil je?");
+   // var antwoord2 = prompt ("Hoeveel rijen wil je?");
+    var antwoord, antwoord2;
+
+    // als antwoord geen nummer is dan antwoord prompt: gelieven alleen nummers in te vullen
+    // in de les kregen we ook nog informatie over hoe we een waarde direct kunnen binnen halen als nummber doormiddel van een parseint
+
+
+    while(isNaN(antwoord) == true || antwoord == "") {
+        antwoord = prompt("hoeveel rijen wil je?");
+    }
+    while(isNaN(antwoord2) == true || antwoord2 == "") {
+        antwoord2 = prompt("hoeveel plaatjes wil je?");
+    }
+
+    for ( aantalRijen = 1; aantalRijen <= parseInt(antwoord); aantalRijen++) {
+        // eigenlijk zet je onder alles een regel maar worden de plaatjes toch onder elkaar laten zien
+        for (aantalPictures = 1; aantalPictures <= antwoord2; aantalPictures++) {
+            addPicture();
+        }
+        addBr();
+    }
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // for(rijTellers; rijteller < 5; rijTeller++){
+    // dan deze
+    //for(kolomTeller=0; kolomTeller < 5; kolomTeller++){
+
+    // eerst deze en dan die er boven staat. dus de for die binnen staat komt als eerst.
+    //}
+
+    //}
+    //
+    // for(waarde,
+</script>
+</body>
+</html>
+
+

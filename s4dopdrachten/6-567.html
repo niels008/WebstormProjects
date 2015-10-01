@@ -1,0 +1,66 @@
+<html>
+<head></head>
+<body>
+<div id="redSpace" style="margin:100px;
+                                            background:red;
+                                            padding:20px;
+                                            color:white;">
+    Hallooooo :D !
+</div>
+<div id="greenSpace" style="margin:100px;
+                                             background:green;
+                                             padding:20px;
+                                             color:white;">
+    <img id="plaatje" src="http://drs.punt.nl/_files/2009-06-15/mooi-plaatje.jpg" width="500px" height="500px" onclick="changeimg(this)">
+
+</div>
+            // opdracht 6.5.6.7
+<script>
+/*
+    function changeimg(){
+        var afb1 = document.getElementById("plaatje")[0];
+
+        if (afb1.src == "http://www.grappigplaatje.nl/wp-content/uploads/2013/09/Grappig-Plaatje-beheerder-team-aan-het-werk.jpg"){
+            afb1.src = "http://drs.punt.nl/_files/2009-06-15/mooi-plaatje.jpg"
+        }
+        else {
+          afb1.src = "http://www.grappigplaatje.nl/wp-content/uploads/2013/09/Grappig-Plaatje-beheerder-team-aan-het-werk.jpg"
+        }
+
+    } */
+
+    //na uitleg van de leraar
+   /* var A = "http://www.grappigplaatje.nl/wp-content/uploads/2013/09/Grappig-Plaatje-beheerder-team-aan-het-werk.jpg";
+    var B = "http://drs.punt.nl/_files/2009-06-15/mooi-plaatje.jpg";
+
+    document.getElementById("plaatje").onclick = BnaarA;
+
+    function AnaarB() {
+        document.getElementById("plaatje").src = B;
+        document.getElementById("plaatje").onclick = BnaarA;
+    }
+
+    function BnaarA() {
+        document.getElementById("plaatje").src = A;
+        document.getElementById("plaatje").onclick = AnaarB;
+
+    }
+    */
+
+    //6.7 door onclick te vervangen door een andere functie kun je het plaatje bijvoorbeeld laten veranderen door een mouseover.
+
+    function afbeeldingA() {
+    document.getElementById("plaatje").src ="http://www.grappigplaatje.nl/wp-content/uploads/2013/09/Grappig-Plaatje-beheerder-team-aan-het-werk.jpg";
+    }
+
+    function afbeeldingB()  {
+    document.getElementById("plaatje").src ="http://drs.punt.nl/_files/2009-06-15/mooi-plaatje.jpg";
+    }
+
+    document.getElementById("plaatje").onmouseover = afbeeldingA;
+    document.getElementById("plaatje").onmouseout = afbeeldingB;
+
+</script>
+
+</body>
+</html>

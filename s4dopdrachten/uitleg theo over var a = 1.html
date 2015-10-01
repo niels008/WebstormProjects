@@ -1,0 +1,39 @@
+<script>
+
+    var a=1;
+    function fn (){
+        a=a+1;                //  uitkomst not a number
+        console.log(a);       //  uitkomst not a number
+        var a =2;             //  uitkomst is 2
+    }
+
+    fn();
+    console.log(a);           //  antwoord 1
+
+</script>
+<script>
+    var a=1;
+    function fn (){
+
+        a=a+1;
+        console.log(a);
+        var a =2;
+    }
+
+    fn();
+    console.log(a);
+
+   /* a=a+2;
+    console.log(a);
+
+    var b = 22;
+    function fn2(){
+
+        b=a+1;
+        var a=3;
+    }
+    fn2();
+    console.log(b); */
+
+</script>
+

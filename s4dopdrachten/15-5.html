@@ -1,0 +1,44 @@
+<html>
+<head>
+    <title>Oefening</title>
+</head>
+<body>
+<script>
+
+    function addBugs() {
+
+        document.body.innerHTML += '<img src="http://s4d.tezzt.nl/wordpress/wp-content/uploads/2014/02/bugs.png" alt="bugs">';
+    }
+
+    function addElmer() {
+
+        document.body.innerHTML += '<img src="http://s4d.tezzt.nl/wordpress/wp-content/uploads/2014/02/elmer.png" alt="elmer">';
+    }
+    // ik heb hier een functie toegevoegd addBr die voegt een br toe aan elk document dat word toegevoegd in de body en die voeg ik vervolgens toe aan de for loop
+    function addBr(){
+
+        document.body.innerHTML += "<br>";
+    }
+
+    function addPicture() {
+
+        if ( Math.random() < 0.9 ) {
+            addBugs();
+        } else {
+            addElmer();
+        }
+        //  90% Bugs 10% Elmer
+    }
+
+    var antwoord = prompt("Hoeveel plaatjes wil je?");
+// eigenlijk zet je onder alles een regel maar worden de plaatjes toch onder elkaar laten zien
+    for (aantalPictures = 1; aantalPictures <= Number(antwoord); aantalPictures++){
+        addPicture();
+        addBr();
+    }
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+
+#include "_init.h"
+void setup() {
+// put your setup code here, to run once:
+Serial.begin(9600);
+}
+
+void loop() {
+// put your main code here, to run repeatedly:
+
+int potofdekselMeter = analogRead(A1);
+
+if (potofdekselMeter > 100) {
+Serial.println( "het is hoger" );
+}else{
+Serial.println( "het is lager" );
+}
+//Serial.print( potofdekselMeter ); Serial.println( " is de waarde" );
+}
+
+// extra uitprobeer shizzle
+
+#define LEDR 3
+#define LEDB 6
+#define LEDG 5
+#define POTMETER1 A1
+
+void setup() {
+// put your setup code here, to run once:
+pinMode (LEDB, OUTPUT);
+pinMode (LEDR, OUTPUT);
+pinMode (LEDG, OUTPUT);
+Serial.begin(9600);
+
+}
+
+void loop() {
+// put your main code here, to run repeatedly:
+
+int potMeter = analogRead(POTMETER1); // waarde 0 en 1023
+
+int LEDWAARDE = map( potMeter, 0, 1023, 255, 0 );
+Serial.println (LEDWAARDE);
+int LEDWAARDE2 = map( LEDWAARDE, 255, 0, 0, 255 );
+int LEDWAARDE3 = map( LEDWAARDE2, 0, 255, 0, 128 );
+
+analogWrite(LEDG, LEDWAARDE2);
+analogWrite(LEDR, LEDWAARDE);
+analogWrite(LEDB, LEDWAARDE3);
+
+}

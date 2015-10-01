@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+
+
+    var mijnSteden = [ "amsterdam", "Arnhem", "London"]; // array
+    var temperaturen = [ 21, 12, 5, 1, 60, 21, 21 ];
+
+
+    function rechtHoek( x,y,h,b ){
+        context.fillRect(x,y,h,b);
+    }
+
+
+    var balkX = 30;
+    for ( var idx=0; idx< temperaturen.lenght; idx++){
+        var balkHoogte = temperaturen[ idx ] *2;
+        rechtHoek( balkX, 200-balkHoogte, 30, balkHoogte );
+        balkX += 40
+    }
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<script>
+
+    void setup() {
+            Serial.begin(9600);
+            Serial.println(  max3(1,2,3) );
+            Serial.println(  max3(3,2,1) );
+            Serial.println(  max3(6,6,6) );
+            Serial.println(  max3(-1,-2,-3) );
+}
+            int max3  (int a, int b, int c){
+            return max(a,max(b,c));
+
+}
+
+            void loop() {
+// put your main code here, to run repeatedly:
+
+}
+
+</script>

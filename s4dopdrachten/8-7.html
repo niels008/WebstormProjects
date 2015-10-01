@@ -1,0 +1,24 @@
+<script>
+
+    int gezondheid = 100;
+
+    int eetEensWat( int gezondheid, int voedselWaarde ) {
+        Serial.print( "gezondheid = ");
+        Serial.println( gezondheid );
+        gezondheid = gezondheid + voedselWaarde;
+        return gezondheid;
+    }
+
+    void setup() {
+        Serial.begin(9600);
+        Serial.print("returnwaarde = "); Serial.println( eetEensWat(50, 10) );
+        Serial.print("gezondheid = ");   Serial.println( gezondheid );
+    }
+
+    void loop() {
+        // deze laat ik leeg...
+    }
+
+</script>
+
+// doet inderdaad hetzelfde..................................

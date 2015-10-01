@@ -1,0 +1,51 @@
+#define KNOP1 A1
+#define KNOP2 7
+#define POTMETER1 A1
+#define LEDB 6a
+void setup() {
+// put your setup code here, to run once:
+
+
+// aangeven of het out of input is
+digitalWrite(KNOP1, HIGH);
+pinMode(KNOP1, INPUT);
+pinMode(LEDB, OUTPUT);
+Serial.begin(9600);
+}
+
+void evenWachtenPIZZA(){
+while( digitalRead(KNOP1) == HIGH);
+Serial.println("effe wachteeeeeehhhhhh");
+Serial.println("PIZZAAAAHHH");
+delay(1000);
+}
+
+void loop() {
+while( digitalRead(KNOP2) == LOW){
+delay(500);
+}
+}
+
+//ik krijg de knop niet aan de praat. mijn arduino is een beetje een weerwar van draden.....
+//maar volgens mij zou dit moeten werken.
+#include _init.h
+void setup() {
+// put your setup code here, to run once:
+bb_init();
+wachtOpKnop();
+}
+
+void loop() {
+// put your main code here, to run repeatedly:
+Serial.println("in de loop");
+//Serial.println(digitalRead(BUTTON3_PIN));
+}
+
+void wachtOpKnop (){
+while (digitalRead(BUTTON3_PIN)==0){}
+return;
+// wachten wachten wachten
+// knop? als de waarde van button3_pin == 1
+// digitalRead(BUTTON3_PIN)
+// dan return
+}

@@ -1,0 +1,42 @@
+<html>
+<head>
+    <title>21 Strijkstokken</title>
+</head>
+<body>
+<h4>aantal lucifers:</h4>
+<h1 id="aantalWeergave"></h1>
+<hr>
+<input type="text" id="pakAantalInvoer">
+<button id="pakKnop">Pak!</button>
+<script>
+
+    function leesPakAantal() {
+        var hetVeld =  document.getElementById("pakAantalInvoer");
+        // de Number-function zet tekst om in een getal (als dat kan)
+        var resultaat = Number( hetVeld.value );
+        // de functie isNaN controleert of z'n parameter een echt
+        // getal is, of Not-a-Number
+        console.log( "leesAantal: resultaat = ", resultaat,
+                "isNaN(resultaat) = ", isNaN(resultaat)
+        );
+        return resultaat
+    }
+
+    var aantalLucifers = 21;
+
+    // TODO: Maak een functie om het aantalLucifers in beeld te
+    // brengen in het H1 element. Zorg ervoor dat bij de start
+    // van het spel, het aantal lucifers zichtbaar is.
+
+    function pakLucifers( aantal ) {
+        // ...de code die je in de eerdere oefeningen maakte...
+    }
+
+    // TODO: maak een functie die met pakLucifers() en leesPakAantal()
+    // één ronde van het spel uitvoert.
+    // Het nieuwe aantal lucifers moet natuurlijk in beeld gebracht worden.
+    // Koppel deze functie aan een 'onclick'-event van de knop.
+
+</script>
+</body>
+</html>

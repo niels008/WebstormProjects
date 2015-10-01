@@ -1,0 +1,30 @@
+<script>
+
+
+    var gezondheid = 100;
+
+    function eetEensWat( gezondheid, voedselWaarde ) {
+        console.log( "gezondheid = ", gezondheid );
+        gezondheid = gezondheid + voedselWaarde;
+        return gezondheid
+    }
+
+    console.log("returnwaarde = ", eetEensWat(50, 10) );
+    console.log("gezondheid = ", gezondheid )
+
+
+
+    /*
+    voorspelling:
+    console.log returnwarde 60
+    console.log gezondheid: 100
+
+    na het uitvoeren:
+    gezondheid =  50
+    returnwaarde =  60
+    gezondheid =  100
+
+    Hoe het nu eigenlijk werkt:
+    onder de function eetEensWAt word een console.log uitgevoerd van gezondheid met een scope naar het het getal eronder.
+     */
+</script>

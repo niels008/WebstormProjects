@@ -1,0 +1,40 @@
+<html>
+<head></head>
+<body>
+<div id="redSpace" style="margin:100px;
+                                            background:red;
+                                            padding:20px;
+                                            color:white;">
+    <textarea id="textbox1"></textarea>  <br>
+    <textarea id="textbox2"></textarea>  <br>
+    <textarea id="textbox3"></textarea>  <br>
+
+
+</div>
+<div id="greenSpace" style="margin:100px;
+                                             background:green;
+                                             padding:20px;
+                                             color:white;">
+    <img id="plaatje" src="http://drs.punt.nl/_files/2009-06-15/mooi-plaatje.jpg" width="500px" height="500px" onclick="changeimg(this)">
+
+</div>
+
+<script>
+
+    function textInhoud( id ) {
+
+        return document.getElementById( id ).value
+    }
+
+   textInhoud("textbox1");
+   textInhoud("textbox2");
+   textInhoud("textbox3");
+
+  function uitkomst (){
+
+      return Math.max(textInhoud("textbox1"),
+            textInhoud("textbox2"),
+            textInhoud("textbox3"))
+  }
+
+</script>

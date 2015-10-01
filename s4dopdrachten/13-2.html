@@ -1,0 +1,25 @@
+<html>
+
+<head>
+    <title>21 Strijkstokken</title>
+</head>
+
+<body>
+<script>
+    var aantalLucifers = 21;
+
+    function pakLucifers(aantal) {
+        if (aantalLucifers - aantal <= 0) {
+            aantalLucifers = 0;
+        } else {
+            aantalLucifers = aantalLucifers - aantal;
+        }
+        return (aantalLucifers); // toegevoegd om te testen
+    }
+</script>
+</body>
+
+</html>
+
+
+// het geeft geen returnwaarde maar wel een zijeffect (ook wel neveneffect)

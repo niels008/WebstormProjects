@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <title>21 Strijkstokken</title>
+</head>
+
+<body>
+<script>
+    // leeftijd is een getal,
+    // casinoVerbod is true of false (een boolean dus)
+    function laatGokkerBinnen(leeftijd, casinoVerbod) {
+        if (leeftijd > 21) {
+            if (casinoVerbod)
+                alert("U mag er niet in omdat u een Casino Verbod heeft")
+            else
+                alert("Welkom in ons prachtige Casino!")
+        } else {
+            alert("Je bent te jong om te mogen gokken. Ga maar naar de kermis.")
+        }
+    }
+</script>
+</body>
+
+</html>
+// ---------------------------------------------
+//      leeftijd	CasinoVerbod	Uitkomst
+//3	    false	    Je bent         niet welkom
+//51	true	    Je bent         niet welkom
+//44	false	    Je bent         welkom
+//25	true	    Je bent         niet welkom
+//25	false	    Je bent         welkom
+// ---------------------------------------------
+//      leeftijd	CasinoVerbod	Uitkomst
+//3	    false	    Je bent         niet welkom
+//51	true	    Je bent         niet welkom
+//44	false	    Je bent         welkom
+//25	true	    Je bent         niet welkom
+//25	false	    Je bent         welkom
+// ---------------------------------------------
+// voorspellingen zijn dus goed i gues

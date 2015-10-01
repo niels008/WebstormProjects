@@ -1,0 +1,36 @@
+<script>
+
+
+    function getGetal(){
+        a = parseInt(prompt("...."));
+        while( isNaN(a)){
+            a = parseInt(prompt("...."));
+        }
+        return a;
+
+    }
+
+</script>
+
+
+<script>
+
+    aantalRijen = getAantal('rijen');
+    aantalKolomen = getAantal('kolomen');
+
+    function getAantal(promt){
+        var a = parseInt(prompt('geef het aantal' + prompt));
+        while(!isNaN(a)){
+            a = parseInt(prompt('geef het aantal' + prompt));
+        }
+        return a;
+    }
+    //buitenste loop
+    for( var rijTeller=0; rijTeller < aantalRijen; rijTeller++) {
+        //binnenste loop
+        for(var kolomTeller=0; kolomTeller < aantalKolommen; kolomTeller++) {
+            addPicture();
+        }
+        addBreak();
+    }
+</script>

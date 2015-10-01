@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <LINK href="css/style.css" rel="stylesheet" type="text/css">
+    <LINK href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <title></title>
+</head>
+<body>
+    <div id="blogs">
+
+    </div>
+
+    <div class="alert alert-success" role="alert">You can make a new blogpost down below</div>
+    <div id="newBlog">
+        <form id="blogForm">
+        <div class="input-group">
+
+            <span class="input-group-addon">Onderwerp: </span>
+            <input id="onderwerp" maxlength="30" name="onderwerp" type="text" required>
+        </div>
+        <br>
+
+            <div class="input-group">
+                 <span class="input-group-addon" >Schrijver: </span>
+                 <input id="schrijver" maxlength="40" name="schrijver" type="text" required>
+            </div>
+        <br>
+
+            <div class="input-group">
+                <span class="input-group-addon" >Video: </span>
+                <input id="video" maxlength="120" name="video" type="text" >
+            </div>
+
+            <h3> Content:</h3>
+            <textarea id="content" name="content" required></textarea>
+        </form>
+        <button type="submit" class="btn btn-success" form="blogForm" value="Verzend">Verzend</button>
+    </div>
+    
+</body>
+<script src="js/main.js"></script>
+</html>

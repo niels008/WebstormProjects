@@ -1,0 +1,71 @@
+<html>
+<head>
+</head>
+<body>
+<div id="roodBlok" style="margin:100px;
+                          background-color:red;
+                          padding:20px;
+                          color:white">
+    lalalala
+</div>
+
+<div id="greenBlok" style="margin:100px;
+                           background-color:#0a0;
+                           padding:20px;
+                           color:white">
+    baaasdfsdfsdfsd
+</div>
+
+<script>
+
+    alert("Hello World")
+
+    document.getElementById("roodBlok").innerHTML = "Dag Allemaal!"
+
+    function doeLeukeAlert(){
+
+        alert("Hello Leuke World")
+
+    }
+
+    //document.getElementById("roodBlok").onclick = doeLeukeAlert
+
+
+    /* function VertelMop1(){
+
+     alert("Sam en Moos lopen met z'n tweeën door de Kalverstraat");
+     alert("Vraagt Sam aan Moos:");
+     alert("'Mag ik in het midden lopen?'");
+
+     }
+
+     function VertelMop2(){
+
+     alert("asdfasdfsSam en Moos lopen met z'n tweeën door de Kalverstraat222222");
+     alert("sadfadsfVraagt Sam aan Moos222222:");
+     alert("'asdfsdfMag ik in het midden lopen?22222'");
+
+     }
+     document.getEementById("roodBlok").onclick = VertelMop2;
+
+     document.getEementById("greenBlok").onclick = VertelMop1; */
+
+    function grap1() {
+
+        document.getElementById("roodBlok").innerHTML = "Dit is best lastig"
+
+    }
+
+    function grap2() {
+
+        document.getElementById("groenBlok").innerHTML = "snap jij het ? <br> grapje zeker...."
+
+    }
+
+    document.getElementById("groenBlok").onclick = grap1
+    document.getElementById("roodBlok").onclick = grap2
+
+</script>
+
+</body>
+</html>

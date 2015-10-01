@@ -1,0 +1,13 @@
+<script>
+    function launchRocket() {
+        alert("LIFT-OFF!!!");
+    }
+
+    function countDown() {
+        for( counter = 10; counter >= 0; counter-- ) {
+            document.body.innerHTML = document.body.innerHTML + counter + "<br>";
+        }
+        launchRocket();
+    }
+    countDown();
+</script>

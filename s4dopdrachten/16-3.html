@@ -1,0 +1,101 @@
+<html>
+<head>
+
+</head>
+<body>
+
+<canvas id="mijnCanvas" width="600" height="600" style="border: 1px solid black"></canvas>
+<script>
+    // het canvas aanroepen vanuit de body
+    var hetCanvas = document.getElementById("mijnCanvas");
+    var context = hetCanvas.getContext("2d");
+
+    console.log( context );
+
+    // vulkleur
+    //context.fillStyle = "rgba(200,20,5,30)";
+
+    // begin context
+    function tekenSter() {
+        context.beginPath();
+        context.moveTo(50, 0);
+        context.lineTo(65, 32);
+        context.lineTo(100, 35);
+        context.lineTo(75, 60);
+        context.lineTo(80, 95);
+        context.lineTo(50, 80);
+        context.lineTo(20, 95);
+        context.lineTo(25, 60);
+        context.lineTo(0, 35);
+        context.lineTo(35, 30);
+        // end context
+        context.closePath();
+        context.fill();
+    }
+
+    var colorSter;
+
+    function tekenSter2(displacementX, displacementY, colorSter) {
+        // begin met tekenen
+        context.beginPath();
+        context.fillStyle = colorSter;
+
+        // move to dus de lijn verplaatst zich
+        context.moveTo(parseInt (50) + parseInt(displacementX),
+                parseInt (0) + parseInt(displacementY));
+
+        context.lineTo(parseInt (65) + parseInt(displacementX),
+                parseInt (32) + parseInt(displacementY));
+
+        context.lineTo(parseInt (100) + parseInt(displacementX),
+                parseInt (35) + parseInt(displacementY));
+
+        context.lineTo(parseInt (75) + parseInt(displacementX),
+                parseInt (60) + parseInt(displacementY));
+
+        context.lineTo(parseInt (80) + parseInt(displacementX),
+                parseInt (95) + parseInt(displacementY));
+
+        context.lineTo(parseInt (50) + parseInt(displacementX),
+                parseInt (80) + parseInt(displacementY));
+
+        context.lineTo(parseInt (20) + parseInt(displacementX),
+                parseInt (95) + parseInt(displacementY));
+
+        context.lineTo(parseInt (25) + parseInt(displacementX),
+                parseInt (60) + parseInt(displacementY));
+
+        context.lineTo(parseInt (0) + parseInt(displacementX),
+                parseInt (35) + parseInt(displacementY));
+
+        context.lineTo(parseInt (35) + parseInt(displacementX),
+                parseInt (30) + parseInt(displacementY));
+        // end context
+
+        context.closePath();
+        context.fill();
+    }
+
+    function randomInteger( min, max ) {
+        return Math.floor( Math.random()*(max-min+1) )+min
+    }
+
+    function randomSterren(aantalSterren){
+        var sterrenTeller;
+        for (sterrenTeller = 0; sterrenTeller <= aantalSterren; sterrenTeller = sterrenTeller + 1){
+            tekenSter2(randomInteger(20, 500), randomInteger (20, 500),
+
+                        //"rgba(" + randomInteger(0, 255) + ", " + randomInteger(0, 255) + ", " + randomInteger(0, 255) + randomInteger(0, 255) + ")"
+"rgba (58, 237, 164,34)"
+
+            );
+            console.info("rgba(" + randomInteger(0, 255) + ", " + randomInteger(0, 255) + ", " + randomInteger(0, 255) + "," + randomInteger(0, 255) + ")");
+            randomSterren();
+            console.log (sterrenTeller);
+        }
+    }
+
+    // randomSterren genereerd een getal tussen de 20 en 500 voor
+</script>
+</body>
+</html>

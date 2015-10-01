@@ -1,0 +1,40 @@
+<html>
+<head></head>
+<body>
+<button onclick="animatieKnop()">Click me!</button>
+
+<canvas id="mijnCanvasje" width="500" height="300"
+        style="border: 1px dotted black">
+</canvas>
+<script>
+    function drawDisc( x,y,r ) {
+        theContext.beginPath();
+        theContext.arc(x,y,r,0,Math.PI*2,false);
+        theContext.closePath();
+        theContext.fill();
+    }
+
+    function startDrawing(canvasId) {
+        var canvasElement = document.getElementById(canvasId);
+        var drawingContext = canvasElement.getContext("2d");
+        return drawingContext;
+    }
+
+    var theContext = startDrawing("mijnCanvasje");
+
+    var x = 100;  // houdt de veranderende horizontale positie bij
+
+    // doe de animatie naar rechts
+     // onclick event
+    function animatieKnop() {
+
+        while( x <= 400 ) {
+            x += 10;
+            theContext.clearRect(0,0,500,300); // wis het canvas
+            drawDisc( x, 100, 30 );
+        }
+
+    }
+</script>
+</body>
+</html>
