@@ -38,6 +38,15 @@ $(document).ready( function() {
         });
     });
 
+$(document).ready(function (){
+    $("#upload-form-image").click(function(){
+        $("#aids").toggle();
+    });
+});
+
+
+
+
 
 
 });/**
