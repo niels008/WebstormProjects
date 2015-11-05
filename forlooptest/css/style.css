@@ -13,10 +13,7 @@ h1,h2,h3,p{
            font-size: 13px;
            color: black;
        }
-
-#newBlog{
-
-}
+#newBlog{}
 .containterdiv{
     text-align: left;
 }
@@ -32,23 +29,19 @@ h1,h2,h3,p{
 
 #blogs{
   margin: 50px !important;
-
 }
 
 #content{
   min-width:500px;
   min-height:100px;
 }
-
 .input-group-addon{
   min-width: 120px !important;
   padding: 0 !important;
 }
-
 .marginleft{
   margin-left: 20px !important;
 }
-
 body{
   margin-bottom: 100px !important;
 }

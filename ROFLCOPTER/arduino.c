@@ -23,10 +23,15 @@ int verplaatsingrol1 = random(0, 4);
 int verplaatsingrol2 = random(0, 40);
 int verplaatsingrol3 = random(0, 4);
 
-
+Serial.print("verplaatsing1 is: ");
+Serial.println ((verplaatsingrol1%5)+1);
+Serial.print("verplaatsing2 is: ");
+Serial.println ((verplaatsingrol2%5)+1);
+Serial.print ("verplaatsing3 is: ");
+Serial.println ((verplaatsingrol3%5)+1);
 
 for (int r = 0; r <= 4; r = r + 1){
-  Serial.print(rol1[r+verplaatsingrol1%5]); Serial.print(" "); Serial.print(rol2[r+ verplaatsingrol2%5]); Serial.print(" "); Serial.print(rol3[r+verplaatsingrol3%5]);
+  Serial.print(rol1[(r+verplaatsingrol1)%5]); Serial.print(" "); Serial.print(rol2[(r+verplaatsingrol2)%5]); Serial.print(" "); Serial.print(rol3[(r+verplaatsingrol3)%5]);
   Serial.println();
 }
 }//close setup

@@ -1,0 +1,18 @@
+#primary-container {
+    position: absolute;
+    background: aqua;
+    width: 100%;
+    height: 100%;
+}
+#primary-menu{
+    background: green;
+    height: 100%;
+}
+#primary-interactivemenu {
+    background: azure;
+    height: 100%;
+}
+#primary-previewwindow {
+    background: red;
+    height: 100%;
+}

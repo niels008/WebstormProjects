@@ -1,0 +1,50 @@
+.image-container,
+.image-container .image-title,
+.image-container .image {
+    float:left;
+    max-width:493px;
+    margin:0px 0px 15px 0px;
+}
+.image-container div.more-views {
+    float:left;
+    max-width:493px;
+}
+.image-container div.more-views a {
+    float:left;
+    display:block;
+    max-width:120px;
+    margin:0px 4px 0px 0px;
+}
+.image-container div.more-views a.image-last {
+    margin:0px;
+}
+.image-container div.more-views a {
+    border:2px solid #ccc;
+
+}
+.image-container div.more-views a.active {
+    border:2px solid #ff6600;
+}
+.thumbnail{
+    max-width: 50px;
+    max-height: 50px;
+    overflow: hidden;
+}
+#more-views a{
+    display: inline-block;
+    float: left;
+}
+.more-views {
+    float: left;
+}
+.image {
+    width: 100px;
+    height: 100px;
+    float: left;
+}
+img {
+    max-width: 500px;
+}
+.image-title{
+
+}
